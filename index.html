@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>kkk</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      .found{
+      background-color:yellow;
+      font-size:16px;
+    }
+    #labels{
+      margin-left:15px;
+      font-size:16px;
+    }
+    
+    #term {
+        
+        margin-right: 15px
+    }
+    
+    #find {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    
+    .sticky {
+    
+        display: flex;
+    }
+    
+    .sticky-top {
+        position: fixed;
+        top: 0;
+        margin-top: 30px;
+        width: 30%;
+       
+    }
+    
+    .sticks {
+        background: white;
+    }
+    
+    .sticky-back {
+        width: 100%;
+      background: black;
+      height: 100px;
+      position: fixed;
+      z-index: 1049;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+     .form-control:focus {
+          box-shadow: 0 0 0.2rem 0.1rem rgba(158, 158, 158, 0.25);
+          border: var(--bs-border-width) solid #e8e8e8;
+      }
+      
+      .form-control::placeholder {
+           color: rgba(67, 70, 74, 0.75);
+            opacity: 1; 
+      }
+    
+      .accordion-button:not(.collapsed) {
+        background-color: #f2f2f2;
+        box-shadow: 0 0 0 .25rem rgba(87, 87, 87, 0.25);
+        
+      }
+      .accordion-button:focus {
+          z-index: 3;
+      border-color: #ddd;
+      outline: 0;
+      box-shadow: 0 0 0 .25rem rgba(202, 202, 202, 0.25);
+        }
+      </style>
+
+<body>
+
+  <div class="sticks">
+    <div class="sticky">
+        <input class="form-control" type="text" id="term" value=''/>
+        <input type="button" id="find" value="Найти"/>
+    </div>
+    <div class="d-flex">
+    <p class="me-3" type="button" id="tegs" type="text" data-value='show'>show</p>
+    <p type="button" id="gfx" type="text" data-value='печ'>печь</p>
+    </div>
+    <div id="labels">
+      <span id="current"></span><span id="count"></span>
+    </div>
+    </div>
+
+
+    <div class="ecr">
+
+      <div class="accordion accordion-flush" id="accordion-faq">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              «Тайга» и «Бахтинка» - какие дымоходные элементы подходят?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+            <div class="accordion-body">
+              «Тайга» и «Бахтинка» - какие дымоходные элементы подходят?
+              При первой топке печи, чтоб прошла термозакалка всей поверхности эмали, следует протопить её последовательно:
+      1. Растопка сначала щепой для постепенного нагрева быстронагревающихся элементов печи;
+      2. Далее через пару часов заложить всю топку дровами с большим КПД горения и ждать нагрев всех трудно доступных мест или сложных участков печи. This
+      Только в этом случае дальнейшая эксплуатация печи не будет выделять запах и дым.
+      ВАЖНО! Все выше перечисленные манипуляции проводить на улице или с полностью открытыми дверьми и окнами.
+            </div>
+            
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              «Бахта» - какие дымоходные элементы подходят?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+            <div class="accordion-body">
+              This is the second item's . It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              «Маэстро» - какие дымоходные элементы подходят?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+            <div class="accordion-body">
+              This is the third item's . It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+         <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+              «Атмосфера» - какие дымоходные элементы подходят?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+            <div class="accordion-body">
+              «Атмосфера» - какие дымоходные элементы подходят?
+              This is the third item's It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>  
+       </div> 
+
+</body>
+
+<script>
+  const stickyDiv = document.querySelector('.sticky'); // Выбираем необходимый div
+  const stickyPoint = stickyDiv.offsetTop; // Точка, при достижении которой элемент становится фиксированным
+  
+  const sticksDiv = document.querySelector('.sticks');
+  const sticksPoint = sticksDiv.offsetTop;
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= stickyPoint) {
+    stickyDiv.classList.add('sticky-top'); // Фиксируем элемент, когда прокрутили до нужной точки
+    sticksDiv.classList.add('sticky-back');
+  } else {
+    stickyDiv.classList.remove('sticky-top'); // Освобождаем его, если скролл находится выше этой точки
+    sticksDiv.classList.remove('sticky-back');
+  }
+});
+  </script>
+
+<script>
+  let tegs = document.getElementById("tegs");
+  let gfx = document.getElementById("gfx");
+  let button = document.getElementById("find");
+ 
+  let tegClear = () => {
+     const term = document.getElementById("term").value;
+   const rd = new RegExp('<span class="found">(' + term + ')<\/span>', "ig");
+   const accordionFaq = document.getElementById("accordion-faq");
+   accordionFaq.innerHTML = accordionFaq.innerHTML.replace(rd, "$1");
+   document.getElementById("count").innerHTML = "";
+   document.getElementById("current").innerHTML = "";
+  }
+ 
+ tegs.addEventListener('click', function () {
+   
+  tegClear();
+  
+ 
+   
+   document.getElementById("term").value = '';
+   document.getElementById("term").value+= tegs.dataset.value;
+    button.click();
+    document.querySelector('.found').scrollIntoView({ block: 'center' });
+ 
+ });
+   
+ 
+ 
+ gfx.addEventListener('click', function () {
+   
+   
+  tegClear();
+ 
+   
+   document.getElementById("term").value = '';
+    document.getElementById("term").value+= gfx.dataset.value;
+    button.click();
+    document.querySelector('.found').scrollIntoView({ block: 'center' });
+ })
+ 
+ 
+     
+   $('#find').click(function(){
+      
+     var btn = $(this);
+     btn.prop("disabled",true);  //__________________________________________________________ disable the button, otherwise clicking fast will cause bugs due to the animation times
+     var term = $('#term').val(); //_________________________________________________________ get the search term from the input
+     $('.collapse').collapse("hide"); //_____________________________________________________ colapse all the sections
+     var rd = new RegExp('<span class="found">('+term+')<\/span>', "ig"); //_________________ remove anything we might have found with a previous search
+     $('#accordion-faq').html( $('#accordion-faq').html().replace(rd, '$1' ) ); 
+     var occurences=[]; //___________________________________________________________________ this array will hold the idexes of any sections we find our search term in 
+     $('#accordion-faq .accordion-body').each(function(i,e){ //_____________________________________ loop through each section looking for our term
+         var r = new RegExp('('+term+')', "ig"); //__________________________________________ create a regex from our term 
+         if( $(this).html().match(r) ){ 
+             var matches = $(this).html().match(r); //_______________________________________ get all the matches 
+             $.each(matches, function(){ //__________________________________________________ loop through them
+                 occurences.push(i); //______________________________________________________ push the index of this section `$('#accordion-faq .accordion-body')` onto the array 
+             });
+             $(this).html( $(this).html().replace(r, '<span class="found">$1</span>') ); //__ wrap each found search term with our `found` span to highlight it 
+         }
+     });
+     var l =occurences.length; //____________________________________________________________ get how many matches we found
+     var c = Number( $('#current').html() ); //______________________________________________ get the currentlly viewed match 
+         c =  c > 0 ? c+1: 0; //_____________________________________________________________ if we are currently viewing a match, increment so we move to the next one 
+         c =  c > l ? 1 : c; // _____________________________________________________________ if the incremented number is higher than the number of matches, reset it to 0
+         c =  c == 0 && l > 0 ? 1 : c ; //___________________________________________________ if this is the first click and we found matches, set current to the first match
+     $('#count').html( l > 0 ? ' of '+ l : ' matches found in document');  //________________ set the text for our number of matches found  
+     $('#current').html( c ); // ____________________________________________________________ set the text for the currently viewed match 
+     if(c != 0){
+         $('#accordion-faq .accordion-button').eq( occurences[c-1] ).click();//_________________ open the section holding the currently viewed match using the indexes we stored earlier
+         $('.found').eq(c-1).focus();//________________________________________________________ set focus to the currently viewed match
+     
+         document.querySelector('.found').scrollIntoView({ block: 'center' });
+     }
+     setTimeout(function() { btn.prop("disabled",false); }, 1000); //________________________ set a timmer to re-enable the button, this gives the animations time to playout, otherwise bugs will occur and multiple setcions will stay open if the user clicks fast
+ });
+ 
+ // _________________________________________________________________________________________ reset everything if the user starts typing again
+ $('#term').keydown(function(){
+     var term = $('#term').val(); //_________________________________________________________ get the search term from the input
+     var rd = new RegExp('<span class="found">('+term+')<\/span>', "ig"); //_________________ remove anything we might have found with a previous search
+     $('#accordion-faq').html( $('#accordion-faq').html().replace(rd, '$1' ) ); 
+     $('#count').html(''); // reset our labels
+     $('#current').html('');
+   // $('..accordion-body').replace(/(<([^>]+)>)/gi, '');
+ });
+    
+ 
+   </script>
+
+</html>
