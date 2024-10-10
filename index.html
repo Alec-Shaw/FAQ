@@ -2,56 +2,53 @@
 <html>
 
 <head>
-  <title>kkk</title>
+  <title>Поиск</title>
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<style>
 
-  #labels{
-    margin-left:15px;
-    font-size:16px;
-   
+<style>
+  #labels {
+    margin-left: 15px;
+    font-size: 16px;
+
   }
-  
+
   .text_decoration {
-      text-decoration: underline dashed red;
+    text-decoration: underline dashed red;
   }
-  
+
   .is-hidden {
-            display: none;
-          }
-          
-  
-  
+    display: none;
+  }
+
+
+
   #find {
-      padding-right: 20px;
-      padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
-  
+
   .sticky {
-  
-      display: flex;
+
+    display: flex;
   }
-  
+
   .sticky-top {
-      position: fixed;
-      top: 0;
-      margin-top: 30px;
-      width: 30%;
-     
+    position: fixed;
+    top: 0;
+    margin-top: 30px;
+    width: 30%;
+
   }
-  
+
   .sticks {
-      background: white;
+    background: white;
   }
-  
+
   .sticky-back {
-      width: 100%;
+    width: 100%;
     background: black;
     height: 100px;
     position: fixed;
@@ -61,292 +58,313 @@
     display: flex;
     justify-content: center;
   }
-  
-   .form-control:focus {
-        box-shadow: 0 0 0.2rem 0.1rem rgba(158, 158, 158, 0.25);
-        border: var(--bs-border-width) solid #e8e8e8;
-    }
-    
-    .form-control::placeholder {
-         color: rgba(67, 70, 74, 0.75);
-          opacity: 1; 
-    }
-  
-    .accordion-button:not(.collapsed) {
-      background-color: #f2f2f2;
-      box-shadow: 0 0 0 .25rem rgba(87, 87, 87, 0.25);
-      
-    }
-    .accordion-button:focus {
-        z-index: 3;
+
+  .form-control:focus {
+    box-shadow: 0 0 0.2rem 0.1rem rgba(158, 158, 158, 0.25);
+    border: var(--bs-border-width) solid #e8e8e8;
+  }
+
+  .form-control::placeholder {
+    color: rgba(67, 70, 74, 0.75);
+    opacity: 1;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #f2f2f2;
+    box-shadow: 0 0 0 .25rem rgba(87, 87, 87, 0.25);
+
+  }
+
+  .accordion-button:focus {
+    z-index: 3;
     border-color: #ddd;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(202, 202, 202, 0.25);
-      }
-      
+  }
+
   .btn-up {
-      position: absolute;
+    position: absolute;
     top: 70px;
     color: white;
     left: 35%;
-    color:white;
+    color: white;
   }
-          
+
   .accordion-button {
-      font-weight: 600;
+    font-weight: 600;
   }
-  
+
   .accordion-flush .accordion-item:last-child {
     border-bottom: solid 1px rgba(102, 102, 102, 0.2);
   }
-  
+
   .box {
-      font-family: 'ProximaNova',Arial,sans-serif;
+    font-family: 'ProximaNova', Arial, sans-serif;
   }
-  
+
   .title_size {
-      font-size: 36px;
-      font-weight: 300;
+    font-size: 36px;
+    font-weight: 300;
   }
-  
+
   .accordion-faqmount {
-      display: none;
+    display: none;
   }
-  
+
   .accordion-faqexpo {
-      display: none;
+    display: none;
   }
-  
+
   .accordion-faqproblem {
-      display: none;
+    display: none;
   }
-  
+
   .accordion-faqMountBah {
-      display: none;
+    display: none;
   }
-  
+
   .accordion-expbah {
-      display: none;
+    display: none;
   }
-          
+
+  .accordionFlushExample {
+    display: none;
+  }
+
   .active {
-      display: block;
+    display: block;
   }
-  
-    </style>
-<script src="/scripts/scrollscript.js"></script>    
+</style>
+<script src="/scripts/scrollscript.js"></script>
 
 <body>
 
   <div class="sticks">
-  
+
     <div class="sticky">
-        <input class="form-control" type="text" id="searchbox" value='' placeholder="Введиет ключевое слово . . ."/>
-        
+      <input class="form-control" type="text" id="searchbox" value='' placeholder="Введиет ключевое слово . . ." />
+
     </div>
     <div class="d-flex textcolor">
-        <p class="me-3">Быстрый поиск:</p>
-    <p class="me-3 text_decoration" type="button" id="tegs" type="text" data-value='первая растопка'>первая растопка</p>
-     <p class="me-3 text_decoration" type="button" id="chim" type="text" data-value='подобрать дымоход'>подобрать дымоход</p>
-    <p class="text_decoration" type="button" id="gfx" type="text" data-value='первая растопка'>первая растопка</p>
+      <p class="me-3">Быстрый поиск:</p>
+      <p class="me-3 text_decoration" type="button" id="tegs" type="text" data-value='первая растопка'>первая растопка
+      </p>
+      <p class="me-3 text_decoration" type="button" id="chim" type="text" data-value='подобрать дымоход'>подобрать
+        дымоход</p>
+      <p class="text_decoration" type="button" id="gfx" type="text" data-value='нет тяги'>нет тяги</p>
     </div>
     <div id="labels">
-      <span class="btn-up" type="button">В начало <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"></path>
-</svg></span>
+      <span class="btn-up" type="button">В начало <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5">
+          </path>
+        </svg></span>
     </div>
+  </div>
+
+  <div class="d-flex flex-row">
+    <div class="d-flex flex-column">
+      <button onclick="mount()">Монтаж банных печей</button>
+      <button onclick="saunaexpo()">Эксплуатация банных печей</button>
+      <button onclick="saunaproblem()">Проблемы банных печей</button>
     </div>
-<div class="d-flex flex-row">
-  <div class="d-flex flex-column">
- <button onclick="mount()">Монтаж банных печей</button>
- <button onclick="saunaexpo()">Эксплуатация банных печей</button>
- <button onclick="saunaproblem()">Проблемы банных печей</button>
-</div>
-<div class="d-flex flex-column">
- <button onclick="bahmount()">Монтаж отопительных печей</button>
- <button onclick="bahexp()">Эксплуатация отопительных печей</button>
- </div>
- </div>
+    <div class="d-flex flex-column">
+      <button onclick="bahmount()">Монтаж отопительных печей</button>
+      <button onclick="bahexp()">Эксплуатация отопительных печей</button>
+      <button onclick="bahproblem()">Проблемы отопительных печей</button>
+    </div>
+  </div>
 
   <div class="ecr">
-   
-<!-- монтаж баня -->
-<div class="accordion accordion-flush accordion-faqmount" id="accordion-faqmount">
-    
-  <div class="box title_size">Монтаж банных печей
-  
-  <span class="is-hidden">На какую площадь помещения рассчитана печь Атмосфера? 
-  Нужно ли протопить печь на улице перед установкой
-  первая растопка
-  термоэмаль которой красят Атмосферу при обжиге не выделяет неприятных запахов
-  Какой диаметр подключения дымохода
-  внутренний наружный подобрать дымоход
-  Как установить самоварный бак самосваренный сваренный установка бака
-  Установка сетки и тоннеля сеткой сетка Смонтировать печь
-  Как правильно монтировать ламели установить ламели устанваливать ламели установка ламелей
-  </span>
-  </div>
-  
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseOneMount" aria-expanded="false" aria-controls="collapseOneMount">
-          На какую площадь помещения рассчитана печь Атмосфера?
-        </button>
-      </h2>
-      <div id="collapseOneMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmountmount">
+    <!-- монтаж баня -->
 
-        <div class="accordion-body ">
-          Атмосфера с сеткой 12-22м² <br />
-          Атмосфера Про с сеткой 18-32м²<br />
-          Атмосфера в ламелях 12-22м2<br />
-          Атмосфера Про в ламелях 18-32м²<br />
-          Атмосфера комби 12-22м²<br />
-          <span class="is-hidden">На какую площадь помещения рассчитана печь Атмосфера? площадь</span>
-          <span class="is-hidden">площадь помещение Монтаж</span>
-        </div>
 
+    <div class="accordion accordion-flush accordion-faqmount" id="accordion-faqmount">
+
+      <div class="box title_size">Монтаж банных печей
+
+        <span class="is-hidden">На какую площадь помещения рассчитана печь Атмосфера?
+          Нужно ли протопить печь на улице перед установкой
+          первая растопка
+          термоэмаль которой красят Атмосферу при обжиге не выделяет неприятных запахов
+          Какой диаметр подключения дымохода
+          внутренний наружный подобрать дымоход
+          Как установить самоварный бак самосваренный сваренный установка бака
+          Установка сетки и тоннеля сеткой сетка Смонтировать печь
+          Как правильно монтировать ламели установить ламели устанваливать ламели установка ламелей
+        </span>
       </div>
-    </div>
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseTwoMount" aria-expanded="false" aria-controls="collapseTwoMount">
-          Нужно ли протопить печь на улице перед установкой?
-        </button>
-      </h2>
-      <div id="collapseTwoMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
 
-        <div class="accordion-body ">
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOneMount" aria-expanded="false" aria-controls="collapseOneMount">
+            На какую площадь помещения рассчитана печь Атмосфера?
+          </button>
+        </h2>
+        <div id="collapseOneMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmountmount">
 
-          Нет, поскольку термоэмаль которой красят Атмосферу при обжиге не выделяет неприятных запахов.
-          <span class="is-hidden">Нужно ли протопить печь на улице перед установкой?  
-          первая растопка термоэмаль которой красят Атмосферу при обжиге не выделяет неприятных запахов Монтаж
-          </span>
+          <div class="accordion-body ">
+            Атмосфера с сеткой 12-22м² <br />
+            Атмосфера Про с сеткой 18-32м²<br />
+            Атмосфера в ламелях 12-22м2<br />
+            Атмосфера Про в ламелях 18-32м²<br />
+            Атмосфера комби 12-22м²<br />
+            <span class="is-hidden">На какую площадь помещения рассчитана печь Атмосфера? площадь</span>
+            <span class="is-hidden">площадь помещение Монтаж</span>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwoMount" aria-expanded="false" aria-controls="collapseTwoMount">
+            Нужно ли протопить печь на улице перед установкой?
+          </button>
+        </h2>
+        <div id="collapseTwoMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseFourMount" aria-expanded="false" aria-controls="collapseFourMount">
-          Какой диаметр подключения дымохода?
-        </button>
-      </h2>
-      <div id="collapseFourMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
-        <div class="accordion-body ">
+          <div class="accordion-body ">
 
-          Печи Атмосфера: 115 внутренний/140 наружный <br />
-          
-
-          <span class="is-hidden"> 
-          Какой диаметр подключения дымохода? 
-          подобрать дымоход
-          Монтаж
-          </span>
+            Нет, поскольку термоэмаль которой красят Атмосферу при обжиге не выделяет неприятных запахов.
+            <span class="is-hidden">Нужно ли протопить печь на улице перед установкой?
+              первая растопка термоэмаль которой красят Атмосферу при обжиге не выделяет неприятных запахов Монтаж
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
-   
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseFifteenMount" aria-expanded="false" aria-controls="collapseFifteenMount">
-          Как установить самоварный бак?
-        </button>
-      </h2>
-      <div id="collapseFifteenMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
-        <div class="accordion-body ">
-          Для правильного соединения бака с печью необходимо применить дымоходный элемент <a class="text-primary"
-            href="https://pkferrum.ru/mountingelements/tproduct/334366748181-hf-adapter-pp" target="_blank">адаптер
-            ПП</a> диаметром 115мм
-          <span class="is-hidden">Как установить самоварный бак? установка бака самосваренный сваренный Монтаж</span>
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFourMount" aria-expanded="false" aria-controls="collapseFourMount">
+            Какой диаметр подключения дымохода?
+          </button>
+        </h2>
+        <div id="collapseFourMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
+          <div class="accordion-body ">
+
+            Печи Атмосфера: 115 внутренний/140 наружный <br />
+
+
+            <span class="is-hidden">
+              Какой диаметр подключения дымохода?
+              подобрать дымоход
+              Монтаж
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapse3Mount" aria-expanded="false" aria-controls="collapse3Mount">
-          Установка сетки и тоннеля
-        </button>
-      </h2>
-      <div id="collapse3Mount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
-        <div class="accordion-body ">
-          Если есть надобность в установке натрубной сетки, и удлинении топливного тоннеля, то есть возможность приобрести отдельно данные элементы.
-          <span class="is-hidden">Установка сетки и тоннеля Монтаж</span>
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFifteenMount" aria-expanded="false" aria-controls="collapseFifteenMount">
+            Как установить самоварный бак?
+          </button>
+        </h2>
+        <div id="collapseFifteenMount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
+          <div class="accordion-body ">
+            Для правильного соединения бака с печью необходимо применить дымоходный элемент <a class="text-primary"
+              href="https://pkferrum.ru/mountingelements/tproduct/334366748181-hf-adapter-pp" target="_blank">адаптер
+              ПП</a> диаметром 115мм
+            <span class="is-hidden">Как установить самоварный бак? установка бака самосваренный сваренный Монтаж</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapse4Mount" aria-expanded="false" aria-controls="collapse4Mount">
-          Как правильно монтировать ламели?
-        </button>
-      </h2>
-      <div id="collapse4Mount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
-        <div class="accordion-body ">
-          1. Смонтировать печь на месте установки, выставить по уровню <br/>
-          2. Отогнуть крепления камней ламелей при помощи ручного инструмента до угла 90 градусов к поверхности задней стенки<br/>
-          3. Вешать ламели следует начинать с одного из краев топливного тоннеля<br/>
-          4. Первую Ламель следует вешать перпендикулярно к полу, по уровню<br/>
-          5. Ламели следует навешивать поочередно, плотно сдвигая друг к другу<br/>
-          6. На корпусе печи есть метка, от нее следует начинать монтаж<br/>
-          7. На ламели «жадеит» и «окаменевшее дерево» с перенесенным рисунком нанесена нумерация, в соответствии с которой и надо собирать ламели<br/>
-          8. Ламели над топливным каналом навешиваются в последнюю очередь.
 
-          <span class="is-hidden">Как правильно монтировать ламели? установить ламели устанваливать ламели установка ламелей</span>
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse3Mount" aria-expanded="false" aria-controls="collapse3Mount">
+            Установка сетки и тоннеля
+          </button>
+        </h2>
+        <div id="collapse3Mount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
+          <div class="accordion-body ">
+            Если есть надобность в установке натрубной сетки, и удлинении топливного тоннеля, то есть возможность
+            приобрести отдельно данные элементы.
+            <span class="is-hidden">Установка сетки и тоннеля Монтаж</span>
+          </div>
         </div>
       </div>
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse4Mount" aria-expanded="false" aria-controls="collapse4Mount">
+            Как правильно монтировать ламели?
+          </button>
+        </h2>
+        <div id="collapse4Mount" class="accordion-collapse collapse" data-bs-parent="#accordion-faqmount">
+          <div class="accordion-body ">
+            1. Смонтировать печь на месте установки, выставить по уровню <br />
+            2. Отогнуть крепления камней ламелей при помощи ручного инструмента до угла 90 градусов к поверхности задней
+            стенки<br />
+            3. Вешать ламели следует начинать с одного из краев топливного тоннеля<br />
+            4. Первую Ламель следует вешать перпендикулярно к полу, по уровню<br />
+            5. Ламели следует навешивать поочередно, плотно сдвигая друг к другу<br />
+            6. На корпусе печи есть метка, от нее следует начинать монтаж<br />
+            7. На ламели «жадеит» и «окаменевшее дерево» с перенесенным рисунком нанесена нумерация, в соответствии с
+            которой и надо собирать ламели<br />
+            8. Ламели над топливным каналом навешиваются в последнюю очередь.
+
+            <span class="is-hidden">Как правильно монтировать ламели? установить ламели устанваливать ламели установка
+              ламелей</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-  </div>
 
-  <!-- эксплуатация баня -->
 
-  
+    <!-- эксплуатация баня -->
 
-<div class="accordion accordion-flush accordion-faqexpo" id="accordion-faqexpo">
- 
-  <div class="box title_size">Эксплуатация банных печей
-    <span class="is-hidden">Эксплуатация Как греть воду в бане Cколько камня поместится в каменку атмосфера
-    каменка марка чугуна чугун масса камней чичстить дымоход как почистить дымоход
-    Как греть воду в бане
-    Cколько камня поместится в каменку
-    Чем отличается марка чугуна ЧХ1 от СЧ1-15-20
-    Как чистить печь и дымоходы
-    Какая толщина чугуна у печи
-    Какой камень можно положить в закрытую каменку
-    Какая толщина чугуна у печи
-    Какой размер стекла у печи стекло атмосфера
-    Нефрит, Жадеит, Малиновый
-            Кварцит, Яшма, Хромит
-            Кварцит, талькохдорит, талькомагнезит, габбро-диабаз
-            Какой камень можно положить в закрытую каменку
-            Какой камень можно положить в сетку
-            Можно ли поддавать масло на камни
-            Сколько пирамидок нужно в закрытую каменку
-            Подовое и колосниковое горение
-            тип горения какой тип горения
-            Чем отличаются ламели от сетки
-            хаммам сауна
-            режим хаммам
-            Эксплуатация 
-            чем отличается чем отличаются отличие ламелей от сетки
-    </span>
-</div>
-     
+
+
+
+
+    <div class="accordion accordion-flush accordion-faqexpo" id="accordion-faqexpo">
+
+      <div class="box title_size">Эксплуатация банных печей
+        <span class="is-hidden">Эксплуатация Как греть воду в бане Cколько камня поместится в каменку атмосфера
+          каменка марка чугуна чугун масса камней чичстить дымоход как почистить дымоход
+          Как греть воду в бане
+          Cколько камня поместится в каменку
+          Чем отличается марка чугуна ЧХ1 от СЧ1-15-20
+          Как чистить печь и дымоходы
+          Какая толщина чугуна у печи
+          Какой камень можно положить в закрытую каменку
+          Какая толщина чугуна у печи
+          Какой размер стекла у печи стекло атмосфера
+          Нефрит, Жадеит, Малиновый
+          Кварцит, Яшма, Хромит
+          Кварцит, талькохдорит, талькомагнезит, габбро-диабаз
+          Какой камень можно положить в закрытую каменку
+          Какой камень можно положить в сетку
+          Можно ли поддавать масло на камни
+          Сколько пирамидок нужно в закрытую каменку
+          Подовое и колосниковое горение
+          тип горения какой тип горения
+          Чем отличаются ламели от сетки
+          хаммам сауна
+          режим хаммам
+          Эксплуатация
+          чем отличается чем отличаются отличие ламелей от сетки
+        </span>
+      </div>
+
 
       <div class="accordion-item box">
         <h2 class="accordion-header">
@@ -437,7 +455,7 @@
         <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
           <div class="accordion-body ">
             Атмосфера: 9 – 11 мм
-           
+
             <span class="is-hidden">Какая толщина чугуна у печи? Эксплуатация </span>
           </div>
         </div>
@@ -517,8 +535,8 @@
           <div class="accordion-body ">
             Печь в ламелях не нужно апгрейдить, это уже готовое к эксплуатации изделие. Для печи в сетке необходимо
             приобретать отдельно камни для заполнения ими пространства между печью и сеткой.
-            <span class="is-hidden">Чем отличаются ламели от сетки? Эксплуатация 
-            чем отличается чем отличаются отличие ламелей от сетки</span>
+            <span class="is-hidden">Чем отличаются ламели от сетки? Эксплуатация
+              чем отличается чем отличаются отличие ламелей от сетки</span>
           </div>
         </div>
       </div>
@@ -544,16 +562,16 @@
 
       <div class="accordion-item box">
         <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+            aria-expanded="false" aria-controls="collapse1">
             Сколько пирамидок нужно в закрытую каменку?
           </button>
         </h2>
         <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
           <div class="accordion-body ">
-            Рекомендуется использовать для укладки нижнего слоя каменки пирамидки из нержавеющей стали, 
-            не, но более 50% объема каменки, а уже верхним слоем уложить камни. В Атмосферу М и Атмосферу L 
-            помещается 10 пирамидок, в Атмосферу ХL от 10-20 пирамидок (это количество рекомендуется 
+            Рекомендуется использовать для укладки нижнего слоя каменки пирамидки из нержавеющей стали,
+            не, но более 50% объема каменки, а уже верхним слоем уложить камни. В Атмосферу М и Атмосферу L
+            помещается 10 пирамидок, в Атмосферу ХL от 10-20 пирамидок (это количество рекомендуется
             для использования в домашних условиях). Для коммерческих бань рекомендуем 20-30 пирамидок.
             <span class="is-hidden">Сколько пирамидок нужно в закрытую каменку Эксплуатация</span>
           </div>
@@ -562,9 +580,9 @@
 
       <div class="accordion-item box">
         <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-            Подовое и колосниковое горение 
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+            aria-expanded="false" aria-controls="collapse2">
+            Подовое и колосниковое горение
           </button>
         </h2>
         <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
@@ -574,18 +592,18 @@
           </div>
         </div>
       </div>
-      
+
       <div class="accordion-item box">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Как добиться режим хаммам? 
+            Как добиться режим хаммам?
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
           <div class="accordion-body ">
-            При растопке печи Атмосферы залить во внутреннюю каменку воду, когда она закипит, 
-            в помещение будет интенсивно поступать перенасыщенный пар, создавая атмосферу хамама. 
+            При растопке печи Атмосферы залить во внутреннюю каменку воду, когда она закипит,
+            в помещение будет интенсивно поступать перенасыщенный пар, создавая атмосферу хамама.
             Температура до 50 градусов, влажность 99%
 
             <span class="is-hidden">хаммам сауна Эксплуатация</span>
@@ -596,229 +614,288 @@
 
     </div>
 
-<!-- проблемы баня -->
+
+    <!-- проблемы баня -->
 
 
 
-<div class="accordion accordion-flush accordion-faqproblem" id="accordion-faqproblem">
-
-  <div class="box title_size">Проблемы банных печей
- <span class="is-hidden"> 
- Проблемы банных печей
- Что делать, если нет тяги, и печь не топится
- нельзя эксплуатировать тяга теплообменник теплообменника сечения сечение дымоходного канала дымохода дымоходный
- горение топлива дымит уменьшение тяги ухудшение тяги нет тяги печь не топится
- дымит
- </span>
- </div>
-
-   <div class="accordion-item box">
-     <h2 class="accordion-header">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-         data-bs-target="#collapseThreeProblem" aria-expanded="false" aria-controls="collapseThreeProblem">
-         Что делать, если нет тяги, и печь не топится?
-       </button>
-     </h2>
-     <div id="collapseThreeProblem" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-
-       <div class="accordion-body ">
-
-        Во-первых, нельзя эксплуатировать такую печь пока не добиться надлежащей тяги. Сначала необходимо 
-        выяснить причину ухудшения тяги. Если, до этого тяга была нормальной, а потом пропала, то причиной 
-        ухудшения тяги может быть, скорее всего, уменьшение сечения дымоходного канала вследствие его засора 
-        продуктами сгорания – сажей, золой, застывшим креозотом. Упавшие в канал дымохода листва, мусор, 
-        птицы, и т.д., обледенение устья дымохода могут быть, также, фактором ухудшения тяги. 
-        Решить проблему восстановления необходимого сечения дымохода, может его механическая очистка. <br/>
-Причиной опрокидывания тяги, может быть задувание ветра, тогда можно применить дымоходный элемент – зонт с ветрозащитой.<br/>
-Если изначально у нового дымохода плохая тяга, то может у него высота ниже необходимых 5 метров, 
-или устье дымохода расположено в зоне ветрового подпора, или много изгибов газохода. 
-В этом случае надо исправить эти недостатки дымохода.<br/>
-Бывает, что из-за недостатка воздуха необходимого для горения топлива может возникнуть проблема с тягой. 
-Соответственно, решается эта проблема организацией надлежащей приточной вентиляции.<br/>
-Бывает, что при неправильной эксплуатации теплообменника на банной печи «схлопывается» его дымоходный канал, 
-соответственно нужно заменить вышедший из строя теплообменник. 
-
-         <span class="is-hidden">нет тяги печь не топится дымит Проблемы</span>
-       </div>
-     </div>
-   </div>
 
 
-   
+    <div class="accordion accordion-flush accordion-faqproblem" id="accordion-faqproblem">
 
- </div>
+      <div class="box title_size">Проблемы банных печей
+        <span class="is-hidden">
+          Проблемы банных печей
+          Что делать, если нет тяги, и печь не топится
+          нельзя эксплуатировать тяга теплообменник теплообменника сечения сечение дымоходного канала дымохода
+          дымоходный
+          горение топлива дымит уменьшение тяги ухудшение тяги нет тяги печь не топится
+          дымит
+          нет тяги
+          Проблемы
+        </span>
+      </div>
 
-<!-- монтаж отопление -->
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThreeProblem" aria-expanded="false" aria-controls="collapseThreeProblem">
+            Что делать, если нет тяги, и печь не топится?
+          </button>
+        </h2>
+        <div id="collapseThreeProblem" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
 
-<div class="accordion accordion-flush accordion-faqMountBah" id="accordion-faqMountBah">
-    
-  <div class="box title_size">Монтаж отопительных печей
-  <span class="is-hidden"> 
-  Монтаж отопительных печей
-  Нужно ли протопить печь на улице перед установкой
-  первая растопка бахта термоэмаль запах выделяет
-  Какой диаметр подключения дымохода внутренний диаметр наружный диаметр
-  подобрать дымоход
-  </span>
-  </div>
+          <div class="accordion-body ">
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseTwoMountBah" aria-expanded="false" aria-controls="collapseTwoMountBah">
-          Нужно ли протопить печь на улице перед установкой?
-        </button>
-      </h2>
-      <div id="collapseTwoMountBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faqMountBah">
+            Во-первых, нельзя эксплуатировать такую печь пока не добиться надлежащей тяги. Сначала необходимо
+            выяснить причину ухудшения тяги. Если, до этого тяга была нормальной, а потом пропала, то причиной
+            ухудшения тяги может быть, скорее всего, уменьшение сечения дымоходного канала вследствие его засора
+            продуктами сгорания – сажей, золой, застывшим креозотом. Упавшие в канал дымохода листва, мусор,
+            птицы, и т.д., обледенение устья дымохода могут быть, также, фактором ухудшения тяги.
+            Решить проблему восстановления необходимого сечения дымохода, может его механическая очистка. <br />
+            Причиной опрокидывания тяги, может быть задувание ветра, тогда можно применить дымоходный элемент – зонт с
+            ветрозащитой.<br />
+            Если изначально у нового дымохода плохая тяга, то может у него высота ниже необходимых 5 метров,
+            или устье дымохода расположено в зоне ветрового подпора, или много изгибов газохода.
+            В этом случае надо исправить эти недостатки дымохода.<br />
+            Бывает, что из-за недостатка воздуха необходимого для горения топлива может возникнуть проблема с тягой.
+            Соответственно, решается эта проблема организацией надлежащей приточной вентиляции.<br />
+            Бывает, что при неправильной эксплуатации теплообменника на банной печи «схлопывается» его дымоходный канал,
+            соответственно нужно заменить вышедший из строя теплообменник.
 
-        <div class="accordion-body ">
-
-          Нет, поскольку термоэмаль которой красят Бахту при обжиге не выделяет неприятных запахов.
-          <span class="is-hidden">Нужно ли протопить печь на улице перед установкой?
-          первая растопка Бахта первая растопка
-          Монтаж
-          </span>
+            <span class="is-hidden">
+              нет тяги печь
+              не топится
+              дымит
+              Проблемы</span>
+          </div>
         </div>
       </div>
+
+
+
+
     </div>
 
 
-    <div class="accordion-item box">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseFourMountBah" aria-expanded="false" aria-controls="collapseFourMountBah">
-          Какой диаметр подключения дымохода?
-        </button>
-      </h2>
-      <div id="collapseFourMountBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faqMountBah">
-        <div class="accordion-body ">
 
-          Диаметр подключения печи Бахта: 115 внутренний /130 наружный
+    <!-- монтаж отопление -->
 
-          <span class="is-hidden"> Какой диаметр подключения дымохода? 
-          Бахта подобрать дымоход внутренний диаметр наружный диаметр Монтаж</span>
+    <div class="accordion accordion-flush accordion-faqMountBah" id="accordion-faqMountBah">
+
+      <div class="box title_size">Монтаж отопительных печей
+        <span class="is-hidden">
+          Монтаж отопительных печей
+          Нужно ли протопить печь на улице перед установкой
+          первая растопка бахта термоэмаль запах выделяет
+          Какой диаметр подключения дымохода внутренний диаметр наружный диаметр
+          подобрать дымоход
+        </span>
+      </div>
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwoMountBah" aria-expanded="false" aria-controls="collapseTwoMountBah">
+            Нужно ли протопить печь на улице перед установкой?
+          </button>
+        </h2>
+        <div id="collapseTwoMountBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faqMountBah">
+
+          <div class="accordion-body ">
+
+            Нет, поскольку термоэмаль которой красят Бахту при обжиге не выделяет неприятных запахов.
+            <span class="is-hidden">Нужно ли протопить печь на улице перед установкой?
+              первая растопка Бахта первая растопка
+              Монтаж
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
 
-  </div>
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFourMountBah" aria-expanded="false" aria-controls="collapseFourMountBah">
+            Какой диаметр подключения дымохода?
+          </button>
+        </h2>
+        <div id="collapseFourMountBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faqMountBah">
+          <div class="accordion-body ">
 
-  <!-- эксплуатация отопление -->
+            Диаметр подключения печи Бахта: 115 внутренний /130 наружный
 
-  <div class="accordion accordion-flush accordion-expbah" id="accordion-expbah">
-
-    <div class="box title_size">Эксплуатация отопительных печей
-<span class="is-hidden"> 
-Чем отличается марка чугуна ЧХ1 от СЧ1-15-20 содержит чугун содержит хром жаростойкостью температура
-Как чистить печь и дымоходы прочистить дымоход чистить печь почистить
-Какая толщина чугуна у печи отопительной печи отопительная печь Какой размер стекла у печи
-бахта бахты бахту стекло
-Какой тип горения в печи? Подовое и колосниковое горение какой Режимы горения
-</span>
-</div>
- 
-  <div class="accordion-item box">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseSixFBah" aria-expanded="false" aria-controls="collapseSixFBah">
-        Чем отличается марка чугуна ЧХ1 от СЧ1-15-20
-      </button>
-    </h2>
-    <div id="collapseSixFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-      <div class="accordion-body ">
-        Чугун марки ЧХ1 содержит в составе хром и характеризуются более высокой жаростойкостью, чем обычные серые
-        чугуны
-        <span class="is-hidden">Чем отличается марка чугуна ЧХ1 от СЧ1-15-20 
-        содержит чугун содержит хром жаростойкостью температура Эксплуатация</span>
+            <span class="is-hidden"> Какой диаметр подключения дымохода?
+              Бахта подобрать дымоход внутренний диаметр наружный диаметр Монтаж</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="accordion-item box">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseSevenFBah" aria-expanded="false" aria-controls="collapseSevenFBah">
-        Как чистить печь и дымоходы?
-      </button>
-    </h2>
-    <div id="collapseSevenFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-      <div class="accordion-body ">
-        Дымоходы и печь чистят вручную. Для облегчения чистки дымохода нужно предусматривать такую возможность -
-        устройство прочистных отверстий, закрываемые заглушками.
-        <span class="is-hidden">как чистить печь и дымоходы почистить прочистить дымоход Эксплуатация</span>
+
+    </div>
+
+    <!-- эксплуатация отопление -->
+
+    <div class="accordion accordion-flush accordion-expbah" id="accordion-expbah">
+
+      <div class="box title_size">Эксплуатация отопительных печей
+        <span class="is-hidden"> Эксплуатация
+          Чем отличается марка чугуна ЧХ1 от СЧ1-15-20 содержит чугун содержит хром жаростойкостью температура
+          Как чистить печь и дымоходы прочистить дымоход чистить печь почистить
+          Какая толщина чугуна у печи отопительной печи отопительная печь Какой размер стекла у печи
+          бахта бахты бахту стекло
+          Какой тип горения в печи? Подовое и колосниковое горение какой Режимы горения Эксплуатация
+        </span>
       </div>
-    </div>
-  </div>
 
-  <div class="accordion-item box">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseEightFBah" aria-expanded="false" aria-controls="collapseEightFBah">
-        Какая толщина чугуна у печи?
-      </button>
-    </h2>
-    <div id="collapseEightFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-      <div class="accordion-body ">
-        Толщина чугуна Бахты: 8 мм - стенки, 10мм – лицевая накладка, 16мм – дно.
-        <span class="is-hidden">Какая толщина чугуна у отопительной печи бахта бахты? Эксплуатация</span>
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSixFBah" aria-expanded="false" aria-controls="collapseSixFBah">
+            Чем отличается марка чугуна ЧХ1 от СЧ1-15-20
+          </button>
+        </h2>
+        <div id="collapseSixFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div class="accordion-body ">
+            Чугун марки ЧХ1 содержит в составе хром и характеризуются более высокой жаростойкостью, чем обычные серые
+            чугуны
+            <span class="is-hidden">Чем отличается марка чугуна ЧХ1 от СЧ1-15-20
+              содержит чугун содержит хром жаростойкостью температура Эксплуатация</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="accordion-item box">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseNineFBah" aria-expanded="false" aria-controls="collapseNineFBah">
-        Какой размер стекла у печи?
-      </button>
-    </h2>
-    <div id="collapseNineFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-      <div class="accordion-body ">
-        Размер стекла печи Бахта - 200х235 мм
-        <span class="is-hidden">Какой размер стекла у печи бахта бахты? стекло Эксплуатация</span>
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSevenFBah" aria-expanded="false" aria-controls="collapseSevenFBah">
+            Как чистить печь и дымоходы?
+          </button>
+        </h2>
+        <div id="collapseSevenFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div class="accordion-body ">
+            Дымоходы и печь чистят вручную. Для облегчения чистки дымохода нужно предусматривать такую возможность -
+            устройство прочистных отверстий, закрываемые заглушками.
+            <span class="is-hidden">как чистить печь и дымоходы почистить прочистить дымоход Эксплуатация</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-
-  <div class="accordion-item box">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseFBah" aria-expanded="false" aria-controls="collapseFBah">
-        Какой тип горения в печи? Подовое и колосниковое горение. 
-      </button>
-    </h2>
-    <div id="collapseFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-      <div class="accordion-body ">
-        У Бахты колосниковое горение. Если не очищать зольники, то получится подовое горение.
-        <span class="is-hidden">Подовое и колосниковое горение отопительной бахта бахты</span>
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseEightFBah" aria-expanded="false" aria-controls="collapseEightFBah">
+            Какая толщина чугуна у печи?
+          </button>
+        </h2>
+        <div id="collapseEightFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div class="accordion-body ">
+            Толщина чугуна Бахты: 8 мм - стенки, 10мм – лицевая накладка, 16мм – дно.
+            <span class="is-hidden">Какая толщина чугуна у отопительной печи бахта бахты? Эксплуатация</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  
-   <div class="accordion-item box">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseOneFBah" aria-expanded="false" aria-controls="collapseOneFBah">
-        Режимы горения печи Бахта.
-      </button>
-    </h2>
-    <div id="collapseOneFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
-      <div class="accordion-body ">
-        У Бахты имеются несколько режимов горения: режим естественного горения, длительного горения и тления.
-        <span class="is-hidden">Режимы горения печи Бахта какой режим горения</span>
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNineFBah" aria-expanded="false" aria-controls="collapseNineFBah">
+            Какой размер стекла у печи?
+          </button>
+        </h2>
+        <div id="collapseNineFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div class="accordion-body ">
+            Размер стекла печи Бахта - 200х235 мм
+            <span class="is-hidden">Какой размер стекла у печи бахта бахты? стекло Эксплуатация</span>
+          </div>
+        </div>
       </div>
+
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFBah" aria-expanded="false" aria-controls="collapseFBah">
+            Какой тип горения в печи? Подовое и колосниковое горение.
+          </button>
+        </h2>
+        <div id="collapseFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div class="accordion-body ">
+            У Бахты колосниковое горение. Если не очищать зольники, то получится подовое горение.
+            <span class="is-hidden">Подовое и колосниковое горение отопительной бахта бахты</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item box">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOneFBah" aria-expanded="false" aria-controls="collapseOneFBah">
+            Режимы горения печи Бахта.
+          </button>
+        </h2>
+        <div id="collapseOneFBah" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div class="accordion-body ">
+            У Бахты имеются несколько режимов горения: режим естественного горения, длительного горения и тления.
+            <span class="is-hidden">Режимы горения печи Бахта какой режим горения</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-  
-  
 
-
-</div>
+    <!-- проблемы отопление -->
 
 
 
+    <div class="accordion accordion-flush accordionFlushExample" id="accordionFlushExample">
+
+      <div class="box title_size">Проблемы отопительных печей
+        <span class="is-hidden">
+          Что делать, если нет тяги, и печь не топится
+          нельзя эксплуатировать тяга теплообменник теплообменника сечения сечение дымоходного канала дымохода
+          дымоходный
+          горение топлива дымит уменьшение тяги ухудшение тяги нет тяги печь не топится
+          дымит
+          нет тяги
+          Проблемы
+        </span>
+      </div>
+
+      <div class="box accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+            aria-expanded="false" aria-controls="flush-collapseOne">
+            Что делать, если печь не топится?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Во-первых, нельзя эксплуатировать такую печь пока не добиться надлежащей тяги. Сначала необходимо
+            выяснить причину ухудшения тяги. Если, до этого тяга была нормальной, а потом пропала, то причиной
+            ухудшения тяги может быть, скорее всего, уменьшение сечения дымоходного канала вследствие его засора
+            продуктами сгорания – сажей, золой, застывшим креозотом. Упавшие в канал дымохода листва, мусор,
+            птицы, и т.д., обледенение устья дымохода могут быть, также, фактором ухудшения тяги.
+            Решить проблему восстановления необходимого сечения дымохода, может его механическая очистка. <br />
+            Причиной опрокидывания тяги, может быть задувание ветра, тогда можно применить дымоходный элемент – зонт с
+            ветрозащитой.<br />
+            Если изначально у нового дымохода плохая тяга, то может у него высота ниже необходимых 5 метров,
+            или устье дымохода расположено в зоне ветрового подпора, или много изгибов газохода.
+            В этом случае надо исправить эти недостатки дымохода.<br />
+            Бывает, что из-за недостатка воздуха необходимого для горения топлива может возникнуть проблема с тягой.
+            Соответственно, решается эта проблема организацией надлежащей приточной вентиляции.<br />
+            Бывает, что при неправильной эксплуатации теплообменника на банной печи «схлопывается» его дымоходный канал,
+            соответственно нужно заменить вышедший из строя теплообменник.
+            <span class="accordionFlushExample">нет тяги печь
+              не топится
+              дымит
+              Проблемы</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 
